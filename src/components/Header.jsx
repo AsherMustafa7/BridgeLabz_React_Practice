@@ -1,11 +1,12 @@
-function Header()
-{
+function Header() {
+
     return (
         <header>
-            <h1>ReactJS Development Practice</h1>
-            <p>Learning React one concept at a time.</p>
+            <h1>Student Management System</h1>
+            <p>React Components Learning</p>
         </header>
     );
+
 }
 
 export default Header;
