@@ -19,6 +19,8 @@
 
 import Header from './components/Header.jsx';
 import LifecycleDemo from './components/LifecycleDemo.jsx';
+// are you importing the function Header of the Header.jsx file? so which one is it , say the funciton name was Not Header() but Hem() then what
+// would you do then? you would do import {Hem} from './components/Header.jsx'; right? so the function name is not important but the file name is important because it is the file that is being imported and the function is being exported from that file. so if the function name was Hem() then you would do import {Hem} from './components/Header.jsx'; 
 function App()
 {
     const studentName = "Rahul";
