@@ -1,28 +1,35 @@
 import StudentCard from './StudentCard.jsx';
 
-function StudentList() {
+function StudentList({ students }) {
+
+    // Conditional rendering using if
+    if (students.length === 0) {
+        return (
+            <div>
+                <h2>No Students Found</h2>
+                <p>Please add students to see them here.</p>
+            </div>
+        );
+    }
 
     return (
         <div>
-            <h1>Student Details</h1>
 
-            <StudentCard
-                name="Asher"
-                department="Computer Science"
-                cgpa={9.86}
-            />
+            <h2>Student Details</h2>
 
-            <StudentCard
-                name="Aryan"
-                department="Information Technology"
-                cgpa={9.45}
-            />
+            {/* Logical AND */}
+            {students.length > 0 && (
+                <p>Total Students: {students.length}</p>
+            )}
 
-            <StudentCard
-                name="Rahul"
-                department="Computer Science"
-                cgpa={8.95}
-            />
+            {students.map(student => (
+                <StudentCard
+                    key={student.id}
+                    name={student.name}
+                    department={student.department}
+                    cgpa={student.cgpa}
+                />
+            ))}
 
         </div>
     );

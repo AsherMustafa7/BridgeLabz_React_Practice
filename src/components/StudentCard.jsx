@@ -1,10 +1,15 @@
-function StudentCard(props) {
+function StudentCard({ name, department, cgpa }) {
 
     return (
         <div>
-            <h2>{props.name}</h2>
-            <p>Department: {props.department}</p>
-            <p>CGPA: {props.cgpa}</p>
+            <h3>{name || "Unnamed Student"}</h3>
+
+            <p>
+                Department: {department || "Not Provided"}
+            </p>
+
+            <p>CGPA: {cgpa ?? "Not Available"}</p>
+
             <hr />
         </div>
     );
