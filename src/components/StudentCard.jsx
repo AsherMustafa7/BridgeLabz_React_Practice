@@ -1,15 +1,14 @@
-export function StudentCard({ name, department, cgpa }) {
+function StudentCard(props) {
 
     return (
         <div>
-            <h3>{name}</h3>
-
-            <p>Department: {department}</p>
-
-            <p>CGPA: {cgpa}</p>
-
+            <h2>{props.name}</h2>
+            <p>Department: {props.department}</p>
+            <p>CGPA: {props.cgpa}</p>
             <hr />
         </div>
     );
 
 }
+
+export default StudentCard;
